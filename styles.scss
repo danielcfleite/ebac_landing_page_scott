@@ -359,10 +359,6 @@ body {
   }
 }
 
-#mobile {
-  display: none !important;
-}
-
 @media only screen and (max-width: 1674px) {
   body {
     overflow-y: auto;
@@ -372,13 +368,18 @@ body {
     right: 10%;
   }
 
-  #mobile {
-    display: flex;
-    flex-direction: column;
-  }
-
   .modal-welcome {
     display: none;
+  }
+
+  #page-1 {
+    display: none !important;
+    opacity: 0;
+  }
+
+  .trailer {
+    display: none;
+    opacity: 0;
   }
 }
 
