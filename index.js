@@ -248,12 +248,10 @@ musicButton.addEventListener("click", () => {
 });
 
 trailerMobile.addEventListener("click", () => {
-  alert("clicou");
   trailerMobile.play();
   trailerMobile.requestFullscreen();
 });
 trailerMovieMobile.addEventListener("click", () => {
-  alert("clicou");
   trailerMovieMobile.play();
   trailerMovieMobile.requestFullscreen();
 });
