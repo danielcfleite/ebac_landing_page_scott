@@ -19,6 +19,28 @@ const pages = document.querySelectorAll(".page");
 const characterContainers = document.querySelectorAll(".characters-container");
 const languageButton = document.querySelector("#language-button");
 const musicButton = document.querySelector("#music-button");
+const mobile = document.querySelector("#mobile");
+
+console.log("Pages:", pages);
+console.log("Mobile:", mobile);
+
+if (window.innerWidth < 1674) {
+  console.log(
+    "Window width is less than 1674. Hiding pages and showing mobile."
+  );
+  pages.forEach((page) => {
+    page.classList.add("hidden");
+  });
+  mobile.classList.remove("hidden");
+} else {
+  console.log(
+    "Window width is greater than or equal to 1674. Showing all pages and hiding mobile."
+  );
+  pages.forEach((page) => {
+    page.classList.remove("hidden");
+  });
+  mobile.classList.add("hidden");
+}
 
 console.log(pages);
 
@@ -26,8 +48,6 @@ let visited = false;
 let currentPage = 1;
 
 const hasVisited = JSON.parse(localStorage.getItem("visited"));
-
-console.log(hasVisited);
 
 function updatePage(page) {
   if (page > 3) {
@@ -54,6 +74,7 @@ function updatePage(page) {
 if (hasVisited) {
   modalText.style.display = "none";
   modalWelcome.style.display = "none";
+  pages[0].classList.remove("hidden");
   videoContainer.classList.remove("hidden");
   trailerMenu.classList.remove("hidden");
   trailer.play();

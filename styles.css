@@ -82,7 +82,7 @@ body {
 }
 
 #page-1 {
-  display: none;
+  display: flex !important;
   background-image: url(./assets/background.gif);
   background-size: cover;
   width: 100vw;
@@ -325,6 +325,10 @@ body {
   transform: scale(1.1);
 }
 
+#mobile {
+  display: none !important;
+}
+
 @media only screen and (max-width: 1674px) {
   body {
     overflow-y: auto;
@@ -332,6 +336,13 @@ body {
   #lang-and-music {
     bottom: 1rem;
     right: 10%;
+  }
+  #mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  .modal-welcome {
+    display: none;
   }
 }
 .mobile-container {
