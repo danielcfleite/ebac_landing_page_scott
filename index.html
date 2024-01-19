@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="modal-welcome">
+      <div class="modal-welcome__text-container">
+        <p class="modal-welcome__text">Not so long ago...</p>
+        <p class="modal-welcome__text hidden">in the misterious land...</p>
+        <p class="modal-welcome__text hidden">of Toronto, Canada</p>
+      </div>
+      <p class="modal-welcome__text-continue hidden">Press <span>E</span></p>
+    </div>
+    <audio src="./assets/song-01.mp3" id="song-01"></audio>
+    <div id="page-1" class="page hidden">
+      <p class="text-movement backwards"><span>A</span></p>
+      <h1 class="title hidden">Scott Pilgrim was Taking the World...</h1>
+      <div class="video-container">
+        <video
+          id="trailer"
+          class="trailer"
+          autoplay
+          muted
+          src="./assets/trailer.mp4"
+          type="video/mp4"
+        ></video>
+        <video
+          id="trailer-movie"
+          class="trailer hidden"
+          autoplay
+          muted
+          src="./assets/trailer_movie.mp4"
+          type="video/mp4"
+        ></video>
+        <div class="trailers-menu">
+          <img
+            src="./assets/scott_anime.jpg"
+            class="trailer-thumb"
+            data-trailer="anime"
+          />
+          <img
+            src="./assets/scott_movie.jpg"
+            class="trailer-thumb"
+            data-trailer="movie"
+          />
+        </div>
+        <div class="trailer__button-container">
+          <button id="mute-button">
+            <i class="ph ph-speaker-simple-slash trailer__button"></i>
+          </button>
+          <button id="fullscreen-button">
+            <i class="ph ph-arrows-out button-video trailer__button"></i>
+          </button>
+        </div>
+      </div>
+      <p class="text-movement forward"><span>D</span></p>
+    </div>
+    <div id="page-2" class="hidden page">
+      <p class="text-movement backwards"><span>A</span></p>
+      <img
+        src="./assets/logo.webp"
+        alt="scott pilgrim logo"
+        class="modal-welcome__logo hidden"
+      />
+      <div class="name-and-characters">
+        <span class="name">Ok</span>
+        <div class="characters-container">
+          <div class="character" character-name="scott">
+            <a
+              target="_blank"
+              href="https://scottpilgrim.fandom.com/wiki/Scott_Pilgrim"
+            >
+              <img
+                src="./assets/scott.gif"
+                alt="scott pilgrim logo"
+                class="character-img scott"
+              />
+            </a>
+          </div>
+          <div class="character" character-name="ramona">
+            <a
+              target="_blank"
+              href="https://scottpilgrim.fandom.com/wiki/Ramona_Flowers"
+            >
+              <img
+                src="./assets/ramona.gif"
+                alt="scott pilgrim logo"
+                class="character-img ramona"
+              />
+            </a>
+          </div>
+          <div class="character" character-name="kim">
+            <a
+              target="_blank"
+              href="https://scottpilgrim.fandom.com/wiki/Kim_Pine"
+            >
+              <img
+                src="./assets/kim.gif"
+                alt="scott pilgrim logo"
+                class="character-img kim"
+              />
+            </a>
+          </div>
+          <div class="character" character-name="Stephen">
+            <a
+              target="_blank"
+              href="https://scottpilgrim.fandom.com/wiki/Stephen_Stills"
+            >
+              <img
+                src="./assets/stephen.gif"
+                alt="scott pilgrim logo"
+                class="character-img stephen"
+              />
+            </a>
+          </div>
+          <div class="character" character-name="Young Neil">
+            <a
+              target="_blank"
+              href="https://scottpilgrim.fandom.com/wiki/Neil_Nordegraf"
+            >
+              <img
+                src="./assets/young-neil.png"
+                alt="scott pilgrim logo"
+                class="character-img young-neil"
+              />
+            </a>
+          </div>
+          <div class="character" character-name="Knives">
+            <a
+              target="_blank"
+              href="https://scottpilgrim.fandom.com/wiki/Knives_Chau"
+            >
+              <img
+                src="./assets/kinves.gif"
+                alt="scott pilgrim logo"
+                class="character-img kinves"
+              />
+            </a>
+          </div>
+          <div class="character" character-name="Wallace">
+            <a
+              href="https://scottpilgrim.fandom.com/wiki/Knives_Chau"
+              target="_blank"
+            >
+              <img
+                src="./assets/wallace.webp"
+                alt="scott pilgrim logo"
+                class="character-img wallace"
+              />
+            </a>
+          </div>
+          <div class="character" character-name="Stacey Pilgrim">
+            <a
+              href="https://scottpilgrim.fandom.com/wiki/Stacey_Pilgrim"
+              target="_blank"
+            >
+              <img
+                src="./assets/stacey.png"
+                alt="scott pilgrim logo"
+                class="character-img stacey"
+              />
+            </a>
+          </div>
+          <div class="character" character-name="Julie Powers">
+            <a
+              href="https://scottpilgrim.fandom.com/wiki/Julie_Powers"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="./assets/julie.png"
+                alt="scott pilgrim logo"
+                class="character-img julie"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <p class="text-movement forward"><span>D</span></p>
+    </div>
+    <div id="page-3" class="page hidden">
+      <p class="text-movement backwards"><span>A</span></p>
+      <img
+        src="./assets/logo.webp"
+        alt="scott pilgrim logo"
+        class="modal-welcome__logo hidden"
+      />
+      <div class="name-and-characters">
+        <span class="name villain">Ok</span>
+        <div class="characters-container villains">
+          <div class="character" character-name="envy">
+            <a
+              href="https://scottpilgrim.fandom.com/wiki/Envy_Adams"
+              target="_blank"
+            >
+              <img
+                src="./assets/envy.gif"
+                alt="scott pilgrim logo"
+                class="character-img envy"
+              />
+            </a>
+          </div>
+          <div class="character" character-name="gideon">
+            <a
+              href="https://scottpilgrim.fandom.com/wiki/Gideon_Graves"
+              target="_blank"
+            >
+              <img
+                src="./assets/gideon.webp"
+                alt="scott pilgrim logo"
+                class="character-img gideon"
+              />
+            </a>
+          </div>
+          <div class="character" character-name="lucas">
+            <a
+              href="https://scottpilgrim.fandom.com/wiki/Lucas_Lee"
+              target="_blank"
+            >
+              <img
+                src="./assets/lucas.gif"
+                alt="scott pilgrim logo"
+                class="character-img lucas"
+              />
+            </a>
+          </div>
+          <div class="character" character-name="patel">
+            <a
+              href="https://scottpilgrim.fandom.com/wiki/Matthew_Patel"
+              target="_blank"
+            >
+              <img
+                src="./assets/patel.webp"
+                alt="scott pilgrim logo"
+                class="character-img patel"
+              />
+            </a>
+          </div>
+          <div class="character" character-name="Todd">
+            <a
+              href="https://scottpilgrim.fandom.com/wiki/Todd_Ingram"
+              target="_blank"
+            >
+              <img
+                src="./assets/todd.webp"
+                alt="scott pilgrim logo"
+                class="character-img todd"
+              />
+            </a>
+          </div>
+          <div class="character" character-name="twins">
+            <a
+              href="https://scottpilgrim.fandom.com/wiki/Kyle_%26_Ken_Katayanagi"
+              target="_blank"
+            >
+              <img
+                src="./assets/twins.gif"
+                alt="scott pilgrim logo"
+                class="character-img twins"
+              />
+            </a>
+          </div>
+          <div class="character" character-name="Roxie">
+            <a
+              href="https://scottpilgrim.fandom.com/wiki/Roxie_Richter"
+              target="_blank"
+            >
+              <img
+                src="./assets/roxxy.webp"
+                alt="scott pilgrim logo"
+                class="character-img roxxy"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <p class="text-movement forward"><span>D</span></p>
+    </div>
+    <div id="lang-and-music">
+      <button id="language-button" class="hidden">
+        <i class="ph ph-globe"> </i>
+      </button>
+      <button id="music-button">
+          <i class="ph ph-cassette-tape"></i>
+        </i>
+      </button>
+    </div>
+    <div id="mobile" class="">
+      <div class="mobile-container">
+
+        <img src="./assets/logo.webp" alt="">
+        <video
+        id="trailer"
+        class="trailer"
+        muted
+        src="./assets/trailer.mp4"
+        type="video/mp4"
+      ></video>
+      <video
+        id="trailer-movie"
+        class="trailer"
+        muted
+        src="./assets/trailer_movie.mp4"
+        type="video/mp4"
+      ></video>
+      </div>
+      <div id="characters">
+        <h2 class="title">The characters</h2>
+        <div class="name-and-characters">
+          <div class="characters-container">
+            <div class="character" character-name="scott">
+              <a
+                target="_blank"
+                href="https://scottpilgrim.fandom.com/wiki/Scott_Pilgrim"
+              >
+                <img
+                  src="./assets/scott.gif"
+                  alt="scott pilgrim logo"
+                  class="character-img scott"
+                />
+              </a>
+            </div>
+            <div class="character" character-name="ramona">
+              <a
+                target="_blank"
+                href="https://scottpilgrim.fandom.com/wiki/Ramona_Flowers"
+              >
+                <img
+                  src="./assets/ramona.gif"
+                  alt="scott pilgrim logo"
+                  class="character-img ramona"
+                />
+              </a>
+            </div>
+            <div class="character" character-name="kim">
+              <a
+                target="_blank"
+                href="https://scottpilgrim.fandom.com/wiki/Kim_Pine"
+              >
+                <img
+                  src="./assets/kim.gif"
+                  alt="scott pilgrim logo"
+                  class="character-img kim"
+                />
+              </a>
+            </div>
+            <div class="character" character-name="Stephen">
+              <a
+                target="_blank"
+                href="https://scottpilgrim.fandom.com/wiki/Stephen_Stills"
+              >
+                <img
+                  src="./assets/stephen.gif"
+                  alt="scott pilgrim logo"
+                  class="character-img stephen"
+                />
+              </a>
+            </div>
+            <div class="character" character-name="Young Neil">
+              <a
+                target="_blank"
+                href="https://scottpilgrim.fandom.com/wiki/Neil_Nordegraf"
+              >
+                <img
+                  src="./assets/young-neil.png"
+                  alt="scott pilgrim logo"
+                  class="character-img young-neil"
+                />
+              </a>
+            </div>
+            <div class="character" character-name="Knives">
+              <a
+                target="_blank"
+                href="https://scottpilgrim.fandom.com/wiki/Knives_Chau"
+              >
+                <img
+                  src="./assets/kinves.gif"
+                  alt="scott pilgrim logo"
+                  class="character-img kinves"
+                />
+              </a>
+            </div>
+            <div class="character" character-name="Wallace">
+              <a
+                href="https://scottpilgrim.fandom.com/wiki/Knives_Chau"
+                target="_blank"
+              >
+                <img
+                  src="./assets/wallace.webp"
+                  alt="scott pilgrim logo"
+                  class="character-img wallace"
+                />
+              </a>
+            </div>
+      </div>
+     
+    </div>
+    </div>
+    <div id="villains">
+      <h2 class="title">The Evil X's</h2>
+      <div class="characters-container villains">
+        <div class="character" character-name="envy">
+          <a
+            href="https://scottpilgrim.fandom.com/wiki/Envy_Adams"
+            target="_blank"
+          >
+            <img
+              src="./assets/envy.gif"
+              alt="scott pilgrim logo"
+              class="character-img envy"
+            />
+          </a>
+        </div>
+        <div class="character" character-name="gideon">
+          <a
+            href="https://scottpilgrim.fandom.com/wiki/Gideon_Graves"
+            target="_blank"
+          >
+            <img
+              src="./assets/gideon.webp"
+              alt="scott pilgrim logo"
+              class="character-img gideon"
+            />
+          </a>
+        </div>
+        <div class="character" character-name="lucas">
+          <a
+            href="https://scottpilgrim.fandom.com/wiki/Lucas_Lee"
+            target="_blank"
+          >
+            <img
+              src="./assets/lucas.gif"
+              alt="scott pilgrim logo"
+              class="character-img lucas"
+            />
+          </a>
+        </div>
+        <div class="character" character-name="patel">
+          <a
+            href="https://scottpilgrim.fandom.com/wiki/Matthew_Patel"
+            target="_blank"
+          >
+            <img
+              src="./assets/patel.webp"
+              alt="scott pilgrim logo"
+              class="character-img patel"
+            />
+          </a>
+        </div>
+        <div class="character" character-name="Todd">
+          <a
+            href="https://scottpilgrim.fandom.com/wiki/Todd_Ingram"
+            target="_blank"
+          >
+            <img
+              src="./assets/todd.webp"
+              alt="scott pilgrim logo"
+              class="character-img todd"
+            />
+          </a>
+        </div>
+        <div class="character" character-name="twins">
+          <a
+            href="https://scottpilgrim.fandom.com/wiki/Kyle_%26_Ken_Katayanagi"
+            target="_blank"
+          >
+            <img
+              src="./assets/twins.gif"
+              alt="scott pilgrim logo"
+              class="character-img twins"
+            />
+          </a>
+        </div>
+        <div class="character" character-name="Roxie">
+          <a
+            href="https://scottpilgrim.fandom.com/wiki/Roxie_Richter"
+            target="_blank"
+          >
+            <img
+              src="./assets/roxxy.webp"
+              alt="scott pilgrim logo"
+              class="character-img roxxy"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

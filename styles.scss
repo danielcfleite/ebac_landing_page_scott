@@ -1,0 +1,530 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Pixelify Sans", sans-serif;
+  overflow-x: hidden;
+  background-color: black;
+  overflow-y: hidden;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    translate: -100vw 0;
+  }
+  to {
+    opacity: 1;
+    translate: 0 10vh;
+  }
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+.modal-welcome {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  position: fixed;
+  z-index: 1000;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 10vw;
+  align-items: center;
+  background-color: black;
+
+  &__logo {
+    width: 20%;
+  }
+
+  &__text-container {
+    display: inline-block;
+    color: #ffe700;
+    font-size: 3rem;
+  }
+
+  &__text {
+    margin-bottom: 1rem;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+
+    &:first-child,
+    &:last-child {
+      animation: typing 2s steps(18), cursor 0.4s step-end infinite alternate;
+    }
+
+    &:nth-child(2) {
+      animation: typing 2s steps(25), cursor 0.4s step-end infinite alternate;
+      padding-right: 10px;
+    }
+  }
+
+  &__text-container {
+    width: 35rem;
+  }
+
+  &__text-continue {
+    font-size: 3rem;
+    color: white;
+    padding-top: 5rem;
+    & span {
+      border: 1px solid white;
+      padding: 0.5rem;
+      animation: cursor 0.3s step-end infinite alternate;
+    }
+  }
+}
+
+#page-1 {
+  display: none;
+  background-image: url(./assets/background.gif);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 10vh 10vw;
+  gap: 1.5rem;
+}
+
+.trailer {
+  height: 50vh;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #ffe700;
+  margin-top: 2rem;
+
+  &__button-container {
+    z-index: 2;
+    position: relative;
+    top: 23vh;
+    right: 17vw;
+    & button {
+      color: white;
+      background-color: transparent;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+
+      &:hover {
+        color: #ffe700;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.trailer-thumb {
+  width: 10vw;
+  height: 20vh;
+  border-radius: 10px;
+  border: 1px solid #ffe700;
+  object-fit: cover;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.trailers-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.video-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.title {
+  color: #ffe700;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.text-movement {
+  display: flex;
+  gap: 1rem;
+  font-size: 3rem;
+  color: white;
+  padding-top: 5rem;
+  & span {
+    border: 1px solid white;
+    padding: 0.5rem;
+    animation: cursor 0.3s step-end infinite alternate;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+#page-2 {
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10vh 10vw;
+  gap: 1.5rem;
+  background-image: url(./assets/background-char-select.webp);
+  background-size: cover;
+}
+
+.name-and-characters {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+#name {
+  color: #ffe700;
+  font-size: 2rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+.characters-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  border: 1px solid #ffe700;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 85vh;
+  border-radius: 10px;
+
+  & .character {
+    cursor: pointer;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  & .ramona {
+    width: 17vw;
+  }
+
+  & .scott {
+    width: 9vw;
+  }
+
+  & .kim {
+    width: 5.5vw;
+  }
+
+  & .stephen {
+    width: 12vw;
+  }
+
+  & .young-neil {
+    width: 17vw;
+    margin-top: -20%;
+  }
+
+  & .kinves {
+    width: 7vw;
+  }
+
+  & .wallace {
+    width: 4.5vw;
+  }
+
+  & .stacey {
+    width: 18vw;
+    margin-top: -30%;
+  }
+
+  & .julie {
+    width: 18vw;
+    margin-top: -30%;
+  }
+
+  & .envy {
+    width: 50%;
+  }
+
+  & .gideon {
+    width: 90%;
+  }
+
+  & .lucas {
+    width: 70%;
+  }
+
+  & .patel {
+    width: 30%;
+    margin-bottom: -20vh;
+    transform: scale(-1, 1);
+  }
+
+  & .todd {
+    width: 60%;
+  }
+
+  & .twins {
+    width: 50%;
+  }
+
+  & .roxxy {
+    width: 70%;
+    margin-top: -10vh;
+  }
+}
+#page-3 {
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10vh 10vw;
+  gap: 1.5rem;
+  background-image: url(./assets/background-villains.png);
+  background-size: cover;
+}
+
+.name-and-characters {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.name {
+  color: #ffe700;
+  font-size: 2rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  &.villain {
+    color: black;
+  }
+}
+
+#lang-and-music {
+  position: fixed;
+  width: 10vw;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  bottom: 1rem;
+  right: 5vw;
+
+  & button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+
+    &:hover {
+      color: #ffe700;
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media only screen and (max-width: 1674px) {
+  body {
+    overflow-y: auto;
+  }
+  #lang-and-music {
+    bottom: 1rem;
+    right: 10%;
+  }
+}
+
+.mobile-container {
+  width: 100%;
+  padding: 2vh 5vw;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  text-align: center;
+}
+
+#characters {
+  background-image: url(./assets/background-char-select.webp);
+  & .title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  & .characters-container {
+    grid-template-columns: 1fr;
+    border: none;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+
+    & .character {
+      display: flex;
+      justify-content: center;
+    }
+
+    & .ramona {
+      width: 40vw;
+    }
+
+    & .scott {
+      width: 25vw;
+    }
+
+    & .kim {
+      width: 13vw;
+    }
+
+    & .stephen {
+      width: 35vw;
+    }
+
+    & .young-neil {
+      width: 60vw;
+      margin-top: -20%;
+    }
+
+    & .kinves {
+      width: 20vw;
+    }
+
+    & .wallace {
+      width: 20vw;
+    }
+
+    & .stacey {
+      width: 18vw;
+      margin-top: -30%;
+    }
+
+    & .julie {
+      width: 18vw;
+      margin-top: -30%;
+    }
+
+    & .envy {
+      width: 50%;
+    }
+
+    & .gideon {
+      width: 90%;
+    }
+
+    & .lucas {
+      width: 70%;
+    }
+
+    & .patel {
+      width: 30%;
+      margin-bottom: -20vh;
+      transform: scale(-1, 1);
+    }
+
+    & .todd {
+      width: 60%;
+    }
+
+    & .twins {
+      width: 50%;
+    }
+
+    & .roxxy {
+      width: 70%;
+      margin-top: -10vh;
+    }
+  }
+}
+
+#villains {
+  background-image: url(./assets/background_mobile_villains.gif);
+  background-position: center;
+  padding-top: 5vh;
+
+  & .title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  & .characters-container {
+    grid-template-columns: 1fr;
+    border: none;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+
+    & .character {
+      display: flex;
+      justify-content: center;
+    }
+
+    & .envy {
+      width: 40vw;
+    }
+
+    & .gideon {
+      width: 50vw;
+    }
+
+    & .lucas {
+      width: 50vw;
+    }
+
+    & .patel {
+      width: 20vw;
+      margin-bottom: 0;
+    }
+
+    & .todd {
+      width: 30vw;
+    }
+
+    & .twins {
+      width: 30vw;
+    }
+
+    & .roxxy {
+      width: 60vw;
+      margin-top: 0;
+    }
+  }
+}
