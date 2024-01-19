@@ -325,6 +325,10 @@ body {
   transform: scale(1.1);
 }
 
+#mobile {
+  display: none;
+}
+
 @media only screen and (max-width: 1674px) {
   body {
     overflow-y: auto;
@@ -340,9 +344,24 @@ body {
     display: none !important;
     opacity: 0;
   }
-  .trailer {
-    display: none;
-    opacity: 0;
+  #scott-logo {
+    margin-top: 2rem;
+    width: 30vw;
+    align-self: center;
+  }
+  #mobile {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1674px) {
+  #mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  #scott-logo {
+    width: 20vw;
+    align-self: center;
   }
 }
 .mobile-container {
@@ -361,7 +380,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-size: 2rem;
-  margin-top: 4rem;
+  padding-top: 4rem;
   margin-bottom: 4rem;
 }
 #characters .characters-container {
@@ -439,7 +458,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-size: 2rem;
-  margin-top: 4rem;
+  padding-top: 4rem;
   margin-bottom: 4rem;
 }
 #villains .characters-container {
