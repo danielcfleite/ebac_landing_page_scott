@@ -20,6 +20,8 @@ const characterContainers = document.querySelectorAll(".characters-container");
 const languageButton = document.querySelector("#language-button");
 const musicButton = document.querySelector("#music-button");
 const mobile = document.querySelector("#mobile");
+const trailerMobile = document.querySelector("#trailer-mobile");
+const trailerMovieMobile = document.querySelector("#trailer-movie-mobile");
 
 console.log("Window width:", window.innerWidth);
 
@@ -246,10 +248,10 @@ musicButton.addEventListener("click", () => {
 });
 
 trailer.addEventListener("click", () => {
-  trailer.play();
-  trailer.requestFullscreen();
+  trailerMobile.play();
+  trailerMobile.requestFullscreen();
 });
 trailerMovie.addEventListener("click", () => {
-  trailerMovie.play();
-  trailerMovie.requestFullscreen();
+  trailerMovieMobile.play();
+  trailerMovieMobile.requestFullscreen();
 });
