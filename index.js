@@ -244,3 +244,12 @@ musicButton.addEventListener("click", () => {
     song01.pause();
   }
 });
+
+trailer.addEventListener("click", () => {
+  trailer.play();
+  trailer.requestFullscreen();
+});
+trailerMovie.addEventListener("click", () => {
+  trailerMovie.play();
+  trailerMovie.requestFullscreen();
+});
